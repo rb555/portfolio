@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel = ”stylesheet” href = ”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+    <link rel="stylesheet" href="estilo_formulario.css">
+    <link  href="enviar_consulta.php">
+    <link  href="consultas.sql">
+    <link  href="conectando.php">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <nav>
+                <img src="" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="texto-cabecera">
+                <p>Fullstack Developer</p>
+                <h1>Hi! I'm Rocío. <br> Welcome to my portfolio.</h1>
+            </div>
+        </div>
+    </div>
+    <!secciones>
+    <!about me>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/rocio.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitulo">About Me</h1>
+                    <p>I was born in the USA and I'm living in Argentina. I started to follow the IT path looking for a change, a place in the IT world, with hope and dreams.</p>
+                    <div class="tab-titulos">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front end</span><br>HTML5, CSS3, JS</li>
+                            <li><span>Back end</span><br> Java, MySQL, PHP</li>
+                            <li><span>Soft Skills</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education" >
+                        <ul>
+                            <li><span>2022: Oracle Next Education Programm</span><br>Front end Developer</li>
+                            <li><span>2022: Universidad Tecnológica Nacional</span><br>Full stack Developer</li>
+                            <li><span>2022: Oracle Next Education Programm</span><br>Back end Developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Hangman Game</span><br>Pure vanilla JS</li>
+                            <li><span>Secret Message</span><br>Combining HTML, CSS and JS</li>
+                            <li><span>Portfolio</span><br>In my personal portfolio you can find the projects I developed using HTML, CSS and JS without frameworks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+                    <! portfolio section>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titulo">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Captura de pantalla (1).png">
+                    <div class="layer">
+                        <h3>Encriptador de texto</h3>
+                        <p>Hide your message with a secret code</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Captura de pantalla (2).png">
+                    <div class="layer">
+                        <h3>Hangman game</h3>
+                        <p>Try to guess the hidden word</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Captura de pantalla (4).png">
+                    <div class="layer">
+                        <h3>E-commerce</h3>
+                        <p>Shop your Geek stuff at AluraGeek e-commerce</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+                     <!contact section>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> intzabai@gmail.com</p>
+                    <div class="social-media">
+                        <a href="https://twitter.com/RoRoBai56?t=okZPmSiXFcGKE29cSay8-g&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/rorobai56"><i class="fab fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rocio-baigorria-a39a81207/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/rb555"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a class="btn btn2" download href="">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="enviar_consulta.php" method="post">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="messagge" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <footer class="copyright">
+        <p>Developed by Rocío Baigorria - 2022</p>
+    </footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/c68d00e2f9.js" crossorigin="anonymous"></script>
+</body>
+</html>
